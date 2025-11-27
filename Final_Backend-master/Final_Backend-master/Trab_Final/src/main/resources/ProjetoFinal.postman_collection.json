@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "39a69fdb-b2e8-420a-8ef6-c71bf702960a",
+		"name": "ProjetoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29047213"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Rafael Pagnan\",\r\n  \"email\": \"rafael.pagnan@email.com\",\r\n  \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descricao\": \"Compra no supermercado\",\r\n  \"valor\": 250.75,\r\n  \"tipo\": \"DESPESA\",\r\n  \"data\": \"2025-11-08\",\r\n  \"usuarioId\": 1,\r\n  \"categoriaId\": 1\r\n}"
+						},
+						"url": "http://localhost:8080/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Rafael Pagnan\",\r\n  \"email\": \"rafael.pagnan@email.com\",\r\n  \"senha\": \"novasenha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/usuarios/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Criar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"nome\": \"Alimentação\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categorias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8080/categorias"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transacoes",
+			"item": [
+				{
+					"name": "Criar Transacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descricao\": \"Compra no supermercado\",\r\n  \"valor\": 250.75,\r\n  \"tipo\": \"DESPESA\",\r\n  \"data\": \"2025-11-08\",\r\n  \"usuarioId\": 1,\r\n  \"categoriaId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/transacoes"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Transacoes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"descricao\": \"Compra no supermercado\",\r\n  \"valor\": 250.75,\r\n  \"tipo\": \"DESPESA\",\r\n  \"data\": \"2025-11-08\",\r\n  \"usuarioId\": 1,\r\n  \"categoriaId\": 1\r\n}"
+						},
+						"url": "http://localhost:8080/transacoes"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
